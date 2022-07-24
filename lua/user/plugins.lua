@@ -78,6 +78,10 @@ return packer.startup(function(use)
         config = get_setup('nvim-tree')
     }
 
+    use { 'ziontee113/color-picker.nvim',
+        config = get_setup('color-picker'),
+   }
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
