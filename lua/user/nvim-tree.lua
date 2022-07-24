@@ -7,6 +7,7 @@ require'nvim-tree'.setup {
                 { key = {'l', '<cr>', 'o'}, cb = tree_cb 'edit' },
                 { key = 'h', cb = tree_cb 'close_node' },
                 { key = 'v', cb = tree_cb 'vsplit' },
+                { key = 's', cb = tree_cb 'split' },
             },
         },
     }
