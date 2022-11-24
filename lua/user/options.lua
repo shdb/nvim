@@ -9,4 +9,4 @@ vim.o.scrolloff = 8
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
-vim.opt.mouse:remove({'a'})
+vim.opt.mouse = ""
