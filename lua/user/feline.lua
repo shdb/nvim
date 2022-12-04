@@ -155,28 +155,20 @@ M.active[2] = {
 
 M.inactive[1] = {
     {
-        provider = 'file_type',
+        provider = 'file_info',
         hl = {
-            fg = 'green',
+            fg = 'black',
             bg = 'darkgreen',
             style = 'bold',
         },
         left_sep = {
-            str = ' ',
-            hl = {
-                fg = 'NONE',
-                bg = 'darkgreen',
-            },
+            'slant_left_2',
+            { str = ' ', hl = { bg = 'darkgreen', fg = 'NONE' } },
         },
         right_sep = {
-            {
-                str = ' ',
-                hl = {
-                    fg = 'NONE',
-                    bg = 'darkgreen',
-                },
-            },
-            'slant_right',
+            { str = ' ', hl = { bg = 'darkgreen', fg = 'NONE' } },
+            'slant_right_2',
+            ' ',
         },
     },
     -- Empty component to fix the highlight till the end of the statusline
