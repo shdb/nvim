@@ -49,7 +49,7 @@ return packer.startup(function(use)
     use 'junegunn/vim-easy-align'
     use 'navarasu/onedark.nvim' -- Theme
 
-    use { 'feline-nvim/feline.nvim',
+    use { 'henrypotgieter/feline.nvim',
         config = get_setup('feline')
     }
 
