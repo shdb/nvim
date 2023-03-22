@@ -47,31 +47,24 @@ M.active[1] = {
         },
         right_sep = {
             ' ',
-            {
-                str = 'slant_left_2_thin',
-                hl = {
-                    fg = 'green',
-                    bg = 'bg',
-                },
-            },
-        },
+        }
     },
     {
         provider = 'position',
         hl = {
-            fg = 'green',
+            fg = 'black',
+            bg = 'darkgreen',
+            style = 'bold',
         },
-        left_sep = ' ',
+        left_sep = {
+            'slant_left_2',
+            { str = ' ', hl = { bg = 'darkgreen', fg = 'NONE' } },
+        },
         right_sep = {
+            { str = ' ', hl = { bg = 'darkgreen', fg = 'NONE' } },
+            'slant_right_2',
             ' ',
-            {
-                str = 'slant_right_2_thin',
-                hl = {
-                    fg = 'green',
-                    bg = 'bg',
-                },
-            },
-        },
+        }
     },
     {
         provider = 'diagnostic_errors',
