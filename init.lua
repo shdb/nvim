@@ -1,5 +1,5 @@
-require('user.plugins')
 require('user.options')
+require('user.plugins')
 require('user.colors')
 require('user.keys')
 require('user.misc')

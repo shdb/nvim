@@ -1,5 +1,6 @@
 vim.bo.filetype = 'on'
 vim.o.syntax = 'enable'
+vim.o.termguicolors = true
 vim.o.hidden = true
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
