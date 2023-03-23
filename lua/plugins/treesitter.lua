@@ -1,7 +1,31 @@
 local function getconfig()
-    require'nvim-treesitter.configs'.setup {
+    require('nvim-treesitter.configs').setup {
       -- A list of parser names, or "all"
-        ensure_installed = 'all',  -- 'all' or a list of languages
+        ensure_installed = {
+            'bash',
+            'c',
+            'cpp',
+            'go',
+            'help',
+            'html',
+            'javascript',
+            'json',
+            'latex',
+            'lua',
+            'make',
+            'markdown',
+            'markdown_inline',
+            'perl',
+            'python',
+            'query',
+            'regex',
+            'ruby',
+            'rust',
+            'tsx',
+            'typescript',
+            'vim',
+            'yaml',
+        },
         sync_install = false,      -- Install parsers synchronously (only applied to `ensure_installed`)
         ignore_install = { "" },   -- List of parsers to ignore installing (for "all")
 
