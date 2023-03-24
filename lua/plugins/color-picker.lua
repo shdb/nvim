@@ -19,6 +19,9 @@ end
 
 return {
     'ziontee113/color-picker.nvim',
+    keys = {
+        { '<leader>cp', ':PickColor<cr>', desc = 'color-picker' },
+    },
     config = function()
         getconfig()
     end
