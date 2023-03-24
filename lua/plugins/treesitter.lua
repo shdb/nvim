@@ -50,6 +50,7 @@ end
 return {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
+    event = "BufReadPost",
     config = function()
         getconfig()
     end
