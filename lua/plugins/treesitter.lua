@@ -6,7 +6,7 @@ local function getconfig()
             'c',
             'cpp',
             'go',
-            'help',
+            --'help',
             'html',
             'javascript',
             'json',
