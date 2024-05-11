@@ -9,6 +9,7 @@ local function getconfig()
                     ['<C-k>'] = actions.move_selection_previous,
                     ['<C-n>'] = actions.cycle_history_next,
                     ['<C-p>'] = actions.cycle_history_prev,
+                    ['<C-s>'] = actions.select_horizontal,
                 },
             },
         },
