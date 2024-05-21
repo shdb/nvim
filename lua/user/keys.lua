@@ -13,3 +13,8 @@ vim.keymap.set('x', 'ga', '<Plug>(EasyAlign)')
 vim.keymap.set('n', 'ga', '<Plug>(EasyAlign)')
 
 vim.keymap.set('v', '.', ':normal .<CR>')          -- repeats the last command for the entire visual selection
+
+vim.keymap.set('n', '<M-.>', '<c-w>>')             -- increase horizontal window size
+vim.keymap.set('n', '<M-,>', '<c-w><')             -- decrease horizontal window size
+vim.keymap.set('n', '<M-t>', '<c-w>+')             -- increase vertical window size
+vim.keymap.set('n', '<M-s>', '<c-w>-')             -- decrease vertical window size
