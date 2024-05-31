@@ -9,9 +9,6 @@ vim.keymap.set('n', '<a-l>', '<c-w>l')             -- jump a window to the left
 vim.keymap.set('n', '<s-l>', ':bnext<cr>')         -- go to the next buffer
 vim.keymap.set('n', '<s-h>', ':bprevious<cr>')     -- go to the previous buffer
 
-vim.keymap.set('x', 'ga', '<Plug>(EasyAlign)')
-vim.keymap.set('n', 'ga', '<Plug>(EasyAlign)')
-
 vim.keymap.set('v', '.', ':normal .<CR>')          -- repeats the last command for the entire visual selection
 
 vim.keymap.set('n', '<M-.>', '<c-w>>')             -- increase horizontal window size
