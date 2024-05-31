@@ -24,6 +24,7 @@ local function getconfig()
             'tsx',
             'typescript',
             'vim',
+            'vimdoc',
             'yaml',
         },
         sync_install = false,      -- Install parsers synchronously (only applied to `ensure_installed`)
