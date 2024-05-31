@@ -175,7 +175,7 @@ local function getconfig()
 end
 
 return {
-    'henrypotgieter/feline.nvim',
+    'freddiehaddad/feline.nvim',
     dependencies = {
         'kyazdani42/nvim-web-devicons', -- optional, for file icon
     },
