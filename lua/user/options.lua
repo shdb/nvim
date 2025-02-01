@@ -9,5 +9,6 @@ vim.o.expandtab = true
 vim.o.scrolloff = 8
 vim.o.ignorecase = true
 vim.o.smartcase = true
+vim.o.laststatus = 3
 
 vim.opt.mouse = ""
