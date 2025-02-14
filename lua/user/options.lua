@@ -1,3 +1,5 @@
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 vim.bo.filetype = 'on'
 vim.o.syntax = 'enable'
 vim.o.termguicolors = true
