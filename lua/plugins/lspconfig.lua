@@ -33,5 +33,7 @@ return {
                 settings = conf.settings,
             }
         end
+
+        vim.diagnostic.config({ virtual_text = true })
     end
 }
