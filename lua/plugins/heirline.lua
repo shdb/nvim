@@ -274,10 +274,11 @@ local function getconfig()
         condition = conditions.has_diagnostics,
 
         init = function(self)
-            self.error_icon = vim.fn.sign_getdefined("DiagnosticSignError")[1].text
-            self.warn_icon  = vim.fn.sign_getdefined("DiagnosticSignWarn")[1].text
-            self.info_icon  = vim.fn.sign_getdefined("DiagnosticSignInfo")[1].text
-            self.hint_icon  = vim.fn.sign_getdefined("DiagnosticSignHint")[1].text
+            self.error_icon = ''
+            self.warn_icon  = ''
+            self.info_icon  = '󰋇'
+            self.hint_icon  = '󰌵'
+
             self.errors     = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
             self.warnings   = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
             self.hints      = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.HINT })
