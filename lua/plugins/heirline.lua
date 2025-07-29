@@ -356,7 +356,7 @@ local function getconfig()
         -- %L = number of lines in the buffer
         -- %c = column number
         -- %P = percentage through file of displayed window
-        provider = "%l/%L%:%c┃%P",
+        provider = "%l/%L:%c┃%P",
         hl = { fg = 'black', bold = true }
     }
     Ruler = utils.surround({ '', '' }, 'darkgreen', { Ruler })
