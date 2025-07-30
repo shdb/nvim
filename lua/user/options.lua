@@ -12,5 +12,8 @@ vim.o.scrolloff = 8
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.laststatus = 3
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.cursorline = true
 
 vim.opt.mouse = ""

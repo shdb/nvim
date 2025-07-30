@@ -24,6 +24,11 @@ return {
                 IncSearch = {fg = '$shdb_black', bg = '$shdb_darkgreen'},
                 VertSplit = {fg = '$shdb_green'},
                 Visual = {bg='$shdb_darkergreen'},
+                LineNrAbove = { fg = '$shdb_darkergreen' },
+                --LineNr = { fg = '$shdb_green' },
+                LineNr = { fg = '$shdb_darkergreen' },
+                LineNrBelow = { fg = '$shdb_darkergreen' },
+                --CursorLine = { fg = 'NONE', bg = 'NONE' },
             }
         }
         vim.cmd('colorscheme onedark')
