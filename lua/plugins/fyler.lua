@@ -5,17 +5,14 @@ return {
         require('fyler').setup {
             mappings = {
                 explorer = {
-                    n = {
                         ['<leader>e'] = 'CloseView',
-                    },
                 },
             },
             views = {
                 explorer = {
-                    width = 0.2,
-                    height = 1,
-                    kind = 'split:leftmost',
-                    border = 'single',
+                    win = {
+                        kind = 'split_left_most',
+                    },
                 },
             },
         }
