@@ -1,17 +1,12 @@
 return {
     'A7Lavinraj/fyler.nvim',
-    dependencies = { 'echasnovski/mini.icons' },
-    config = function()
-        require('fyler').setup {
-            views = {
-                explorer = {
-                    win = {
-                        kind = 'split_left_most',
-                    },
-                },
-            },
-        }
-
+    dependencies = { 'nvim-mini/mini.icons' },
+    opts = {
+        win = {
+            kind = 'split_left_most'
+        },
+    },
+    init = function()
         vim.keymap.set('n', '<leader>e',
             function()
                 for _, win in ipairs(vim.api.nvim_list_wins()) do
@@ -19,7 +14,7 @@ return {
                         return vim.api.nvim_win_close(win, false)
                     end
                 end
-                require('fyler').open()
+                vim.cmd.Fyler()
             end,
             { desc = 'file explorer' }
         )
