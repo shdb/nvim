@@ -29,6 +29,7 @@ local function getconfig()
             'rust',
             'tsx',
             'typescript',
+            'typst',
             'vim',
             'vimdoc',
             'yaml',

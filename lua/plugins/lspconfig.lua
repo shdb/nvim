@@ -1,6 +1,6 @@
 return {
     'neovim/nvim-lspconfig',
-    ft = { 'lua', 'rust', 'perl' },
+    ft = { 'lua', 'rust', 'perl', 'typst' },
     opts = {
         servers = {
             lua_ls = {
@@ -22,6 +22,13 @@ return {
             },
             perlls = {
                 settings = {},
+            },
+            tinymist = {
+                settings = {
+                    formatterMode = "typstyle",
+                    exportPdf = "onType",
+                    semanticTokens = "disable"
+                },
             },
         },
     },
