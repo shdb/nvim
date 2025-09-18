@@ -33,12 +33,9 @@ return {
         },
     },
     config = function(_, opts)
-        local lspconfig = require('lspconfig');
-
         for name, conf in pairs(opts.servers) do
-            lspconfig[name].setup {
-                settings = conf.settings,
-            }
+            vim.lsp.config(name, conf.settings)
+            vim.lsp.enable(name)
         end
 
         vim.diagnostic.config({ virtual_lines = true })
