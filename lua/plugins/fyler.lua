@@ -9,7 +9,7 @@ return {
     init = function()
         vim.keymap.set('n', '<leader>e',
             function()
-                require('fyler').toggle()
+                require('fyler').toggle({ kind = 'split_left_most' })
             end,
             { desc = 'file explorer' }
         )
