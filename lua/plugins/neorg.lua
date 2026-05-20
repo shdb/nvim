@@ -24,6 +24,11 @@ return {
                 },
             },
         })
-        vim.o.conceallevel = 3
+        vim.api.nvim_create_autocmd("FileType", {
+            pattern = "norg",
+            callback = function()
+                vim.opt_local.conceallevel = 3
+            end,
+        })
     end,
 }
