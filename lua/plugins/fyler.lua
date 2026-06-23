@@ -2,9 +2,8 @@ return {
     'A7Lavinraj/fyler.nvim',
     dependencies = { 'nvim-mini/mini.icons' },
     opts = {
-        win = {
-            kind = 'split_left_most'
-        },
+        integrations = { icon = 'mini_icons' },
+        kind = 'split_left_most',
     },
     init = function()
         vim.keymap.set('n', '<leader>e',
