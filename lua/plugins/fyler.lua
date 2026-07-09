@@ -5,12 +5,13 @@ return {
         integrations = { icon = 'mini_icons' },
         kind = 'split_left_most',
     },
-    init = function()
-        vim.keymap.set('n', '<leader>e',
+    keys = {
+        {
+            '<leader>e',
             function()
                 require('fyler').toggle({ kind = 'split_left_most' })
             end,
-            { desc = 'file explorer' }
-        )
-    end,
+            desc = 'file explorer'
+        }
+    }
 }
