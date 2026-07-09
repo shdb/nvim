@@ -3,18 +3,43 @@ return {
     dependencies = {
         'nvim-lua/plenary.nvim',
     },
-    config = function()
-        vim.keymap.set('n', '<leader>ff', require("telescope.builtin").find_files, { desc = 'telescope find file' })
-        vim.keymap.set('n', '<leader>fg', require("telescope.builtin").live_grep,  { desc = 'telescope grep' })
-        vim.keymap.set('n', '<leader>fb', require("telescope.builtin").buffers,    { desc = 'telescope buffers' })
-        vim.keymap.set('n', '<leader>fh', require("telescope.builtin").help_tags,  { desc = 'telescope help' })
-        vim.keymap.set('n', '<leader>fn',
+    keys = {
+        {
+            '<leader>ff',
+            function()
+                require("telescope.builtin").find_files()
+            end,
+            desc = 'telescope find file'
+        },
+        {
+            '<leader>fg',
+            function()
+                require("telescope.builtin").live_grep()
+            end,
+            desc = 'telescope grep'
+        },
+        {
+            '<leader>fb',
+            function()
+                require("telescope.builtin").buffers()
+            end,
+            desc = 'telescope buffers'
+        },
+        {
+            '<leader>fh',
+            function()
+                require("telescope.builtin").help_tags()
+            end,
+            desc = 'telescope help'
+        },
+        {
+            '<leader>fn',
             function()
                 require("telescope.builtin").find_files {
                     cwd = vim.fn.stdpath('config')
                 }
             end,
-            { desc = 'telescope neovim config' }
-        )
-    end
+            desc = 'telescope neovim config'
+        },
+    }
 }
