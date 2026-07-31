@@ -1,4 +1,5 @@
 require('user.options')
+require('user.ui2')
 require('user.plugins')
 require('user.keys')
 require('user.misc')
