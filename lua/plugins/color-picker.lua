@@ -1,28 +1,24 @@
-local function getconfig()
-    require("color-picker").setup({ -- for changing icons & mappings
-        -- ["icons"] = { "ﱢ", "" },
-        -- ["icons"] = { "ﮊ", "" },
-        -- ["icons"] = { "", "ﰕ" },
-        -- ["icons"] = { "", "" },
-        -- ["icons"] = { "", "" },
-        -- ["icons"] = { "ﱢ", "" },
-        -- ["border"] = "rounded", -- none | single | double | rounded | solid | shadow
-        -- ["keymap"] = { -- mapping example:
-        --	["U"] = "<Plug>ColorPickerSlider5Decrease",
-        --	["O"] = "<Plug>ColorPickerSlider5Increase",
-        --},
-    })
-
-    vim.keymap.set('n', '<leader>cp', ':PickColor<cr>')
-    vim.keymap.set('i', '<leader>cp', ':PickColorInsert<cr>')
-end
-
 return {
-    'ziontee113/color-picker.nvim',
+    "uga-rosa/ccc.nvim",
+    cmd = "CccPick",
+    event = "BufReadPost", -- Lazy load when opening a file
     keys = {
-        { '<leader>cp', ':PickColor<cr>', desc = 'color-picker' },
+        { "<leader>cp", "<cmd>CccPick<CR>", desc = "Color Picker" },
+        { "<leader>ct", "<cmd>CccHighlighterToggle<CR>", desc = "Toggle Color Highlight" },
+        { "<leader>cv", "<cmd>CccConvert<CR>", desc = "Convert Color Format" },
     },
     config = function()
-        getconfig()
-    end
+        local ccc = require("ccc")
+        ccc.setup({
+            inputs = {
+                ccc.input.rgb,
+                ccc.input.hsl,
+                ccc.input.cmyk,
+            },
+            highlighter = {
+                auto_enable = true,
+                lsp = true,
+            },
+        })
+    end,
 }
