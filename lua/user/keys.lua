@@ -16,12 +16,14 @@ vim.keymap.set('n', '<M-,>', '<c-w><')             -- decrease horizontal window
 vim.keymap.set('n', '<M-t>', '<c-w>+')             -- increase vertical window size
 vim.keymap.set('n', '<M-s>', '<c-w>-')             -- decrease vertical window size
 
-local function toggle_diagnostics()
-    local val = not vim.diagnostic.config().virtual_lines
-    vim.diagnostic.config({
-        virtual_lines = val,
-        underline     = val,
-    })
-end
-
-vim.keymap.set('n', '<leader>ds', toggle_diagnostics, { desc = 'toggle diagnostics' })
+vim.keymap.set(
+    'n', '<leader>ds',
+    function()
+        local val = not vim.diagnostic.config().virtual_lines
+        vim.diagnostic.config({
+            virtual_lines = val,
+            underline     = val,
+        })
+    end,
+    { desc = 'toggle diagnostics' }
+)
