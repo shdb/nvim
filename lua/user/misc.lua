@@ -1,10 +1,42 @@
+-- remove trailing whitespaces on save
 vim.api.nvim_create_autocmd({'BufWritePre'}, {
     pattern = '*',
     callback = function(env)
-        if vim.bo.filetype == 'markdown' then  -- markdown files can have trailing whitespaces
+        -- Exclude filetypes that can have trailing whitespaces
+        local filetype_blacklist = {
+            ['markdown']        = true,
+            ['diff']            = true,
+            ['gitcommit']       = true,
+            ['mail']            = true,
+            ['help']            = true,
+            ['TelescopePrompt'] = true,
+            ['lazy']            = true,
+            ['mason']           = true,
+        }
+        if filetype_blacklist[vim.bo.filetype] then
             return
         end
-        vim.cmd('%s/\\s\\+$//e')  -- remove trailing whitespaces on save
+
+        -- Exclude non-file buffers (like terminal, prompt, quickfix, nofile)
+        local buftype_blacklist = {
+            ['terminal'] = true,
+            ['nofile']   = true,
+            ['prompt']   = true,
+            ['quickfix'] = true,
+        }
+        if buftype_blacklist[vim.bo.buftype] then
+            return
+        end
+
+        -- Save cursor position and window view state
+        local cursor_pos = vim.api.nvim_win_get_cursor(0)
+        local view = vim.fn.winsaveview()
+
+        vim.cmd('%s/\\s\\+$//e')
+
+        -- Restore cursor position and view state
+        vim.api.nvim_win_set_cursor(0, cursor_pos)
+        vim.fn.winrestview(view)
     end
 })
 
